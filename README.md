@@ -70,3 +70,41 @@ function dir(elem, dir, until) {
     return matched;
   }
 ```
+
+## 元素大小
+
+> 元素内尺寸的大小: clientWidth、clientHeight
+
+1.clientWidth/clientHeight: 用于描述元素的内尺寸：元素内容 + 两边内边距。
+
+![](./img/2.jpg)
+
+```
+clientWidth = width+padding（left、right）
+clientHeight = height+padding（top、bottom）
+
+```
+
+> 网页可见区域宽document.body.clientWidth,'网页可见区域高document.body.clientHeight
+
+1.可见区域的宽body默认的margin的值不会影响可视区的值
+
+2.没有margin-left时
+
+![](./img/3.png)
+
+3.设置margin-left后
+
+![](./img/4.png)
+
+
+```
+'网页可见区域宽clientWidth：' + document.body.clientWidth
+'网页可见区域高clientHeight：' + document.body.clientHeight
+```
+
+> 偏移量 offset
+
+1. 元素的可见大小由宽度高度决定，其中还要包括内边距、滚动条、边宽大小（不包括外边距）
+
+![](./img/5.jpg)
